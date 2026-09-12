@@ -1,0 +1,17 @@
+<div class="container mt-4">
+  <h2>Contacts</h2>
+  <ul class="list-group mb-3">
+    <li *ngFor="let contact of contacts" class="list-group-item" (click)="selectContact(contact)">
+      {{ contact.username }}
+    </li>
+  </ul>
+  <button class="btn btn-primary" (click)="createNewContact()">Новый контакт</button>
+  <contact-details
+    *ngIf="selectedContact"
+    [contact]="selectedContact"
+    [createHandler]="addContact"
+    [updateHandler]="updateContact"
+    [deleteHandler]="deleteContact"
+  >
+  </contact-details>
+</div>
