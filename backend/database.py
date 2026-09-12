@@ -1,5 +1,11 @@
 from pymongo import MongoClient
+from dotenv import load_dotenv
+import os
 
-client = MongoClient("mongodb://localhost:27017")
-db = client["test"]
+load_dotenv()
+
+MONGODB_URI = os.getenv("MONGODB_URI")
+
+client = MongoClient(MONGODB_URI)
+db = client["my_dream_db"]
 contacts_collection = db["contacts"]
