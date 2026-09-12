@@ -32,7 +32,8 @@ class Contact(BaseModel):
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "*"
+        "http://localhost:4200",
+        "https://mirea-app-1.onrender.com",
     ],
     allow_credentials=True,
     allow_methods=["*"],

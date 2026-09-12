@@ -28,8 +28,6 @@ export class ContactListComponent implements OnInit {
   }
 
   selectContact(contact: Contact): void {
-    console.log('📌 Выбран контакт:', contact);
-    console.log(' ID контакта:', contact._id);
     this.selectedContact = contact;
   }
 

@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
 export class ContactService {
-  private APIUrl = 'https://mirea-app.onrender.com';
+  private APIUrl = 'https://mirea-app.onrender.com/v1/contact';
   constructor(private http: HttpClient) {}
   createContact(newContact: Contact): Observable<Contact> {
     return this.http.post<Contact>(this.APIUrl, newContact);
